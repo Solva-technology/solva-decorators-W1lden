@@ -3,6 +3,7 @@ from functools import wraps
 
 def simple_cache(func):
     cache = {}
+
     @wraps(func)
     def wrapper(*args, **kwargs):
         print(args)
@@ -13,4 +14,5 @@ def simple_cache(func):
             print("Из кэша")
             return cache[args]
         return result
+
     return wrapper

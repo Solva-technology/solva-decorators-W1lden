@@ -9,4 +9,5 @@ def validate_positive(func):
                 raise ValueError("Все аргументы должны быть положительными")
         result = func(*args, **kwargs)
         return result
+
     return wrapper

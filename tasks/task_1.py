@@ -1,5 +1,6 @@
 from functools import wraps
 
+
 def log(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -7,4 +8,5 @@ def log(func):
         result = func(*args, **kwargs)
         print(f"Результат: {result}")
         return result
+
     return wrapper
